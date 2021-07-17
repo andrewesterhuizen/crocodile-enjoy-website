@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crocodile enjoy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        background: white;
+        font-family: "Oswald", sans-serif;
+      }
+
+      main {
+        height: 100%;
+        display: grid;
+        overflow: hidden;
+        grid-template-rows: repeat(5, 20%);
+        grid-template-columns: repeat(5, 20%);
+      }
+
+      .ce-text {
+        width: 90%;
+        margin: auto;
+        grid-row: 1/6;
+        grid-column: 1/6;
+        z-index: 10;
+      }
+
+      .ce-logo {
+        width: 280%;
+        grid-row: 1/6;
+        grid-column: 1/6;
+      }
+
+      .out-now-link-container {
+        padding: 0 10px;
+        grid-row: 1/2;
+        grid-column: 1/6;
+        text-align: right;
+        cursor: pointer;
+      }
+
+      .out-now-text {
+        font-size: 28px;
+        color: red;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .out-now-text p {
+        margin: 0;
+      }
+
+      .copyright-text {
+        font-size: 14px;
+        position: absolute;
+        bottom: -5px;
+        left: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        main {
+          grid-template-columns: 100%;
+          grid-template-rows: repeat(3, 33%);
+        }
+
+        .ce-text {
+          grid-row: 2/3;
+        }
+
+        .ce-logo {
+          width: 800%;
+          grid-row: 1/2;
+        }
+      }
+
+      .blink {
+        opacity: 0;
+        animation: blink-animation 1s steps(5, start) infinite;
+      }
+
+      @keyframes blink-animation {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <object class="ce-logo" type="image/svg+xml" data="ce-logo.svg"></object>
+      <object class="ce-text" type="image/svg+xml" data="ce-text.svg"></object>
+      <div class="out-now-link-container">
+        <a href="/plasma-boys-1.html" target="_blank" class="out-now-text">
+          <p class="blink">Plasma Boys New Release</p>
+        </a>
+      </div>
+      <p class="copyright-text">© 2068</p>
+    </main>
+  </body>
+</html>
